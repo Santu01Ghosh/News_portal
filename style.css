@@ -1,0 +1,327 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary_color:rgb(157, 185, 202);
+    --Sec_color:rgba(150, 91, 91, 0.711);
+    --main_color:rgb(23, 31, 69);
+
+}
+
+ /*body{
+   background-color: var(--Sec_color);
+    color: azure ;
+}*/
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    max-width: 1180px;
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+nav{
+    background-color:rgb(40, 26, 10,0.7);
+    box-shadow: 0 0 4px #bb02ef;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+}
+.main-nav{
+    justify-content: space-between;
+    padding: 5px;
+}
+
+img{
+    width: 70px;
+    border: 2px solid rgb(113, 54, 54);
+    border-radius: 120px;
+}
+
+
+
+ul li {
+    color: whitesmoke;
+    padding: 5px;
+    margin: 10px;
+    gap: 50px;
+    font-family:serif;
+    font-size: 18px;
+}
+
+
+ul li:hover{
+    cursor: pointer;
+    color:var(--main_color);
+    color: rgba(3, 3, 3, 0.54);
+    text-shadow: 1px 1px 1px rgb(255, 255, 255);
+}
+
+ul li:active{
+    color:rgb(194, 18, 18);
+}
+
+.searchbar{
+    height: 21px;
+    width: 21px;
+    gap: 18px;
+}
+
+.news-input{
+    text-align: center;
+    width: 180px;
+    height: 30px;
+    border: 1px solid rgb(11, 11, 11);
+    border-radius: 8px;
+}
+
+.news-input:hover{
+    background-color: #2724243f;
+     color: rgb(255, 251, 251);
+    
+}
+
+.search-button{
+    border-radius: 8px;
+    width: 66px;
+    height: 25px;
+    border: 1px solid black;
+    background-color: rgb(235, 235, 245);
+    color: rgb(4, 4, 4);
+}
+
+.search-button:hover{
+    color: rgb(249, 248, 247);
+    background-color:rgb(5, 5, 5);
+    cursor: pointer;
+}
+
+
+.btnLogin-popup{
+    width: 9vw;
+    height: 4vh;
+    border-radius: 8px;
+}
+
+
+.btnLogin-popup:hover{
+    background-color: rgba(197, 197, 197, 0.523);
+    color: rgb(8, 8, 8);
+}
+
+main{
+    padding-block: 20px;
+    margin-top: 80px;
+}
+
+.cards-container{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: start;
+}
+
+
+.card{
+    width: 360px;
+    min-height: 400px;
+    box-shadow: 0px 0px 4px #d4eccf;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #715d5d;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+}
+
+.card:hover{
+    box-shadow: 1px 1px 8px #d4ecff;
+    background-color: #7698a9;
+    transform: translateY(-2px);
+}
+
+.card-header img{
+    width: 100%;
+    height: 180px;
+    border-radius: 0px;
+    border: none;
+}
+
+.card-content{
+    padding: 12px;
+}
+
+.news-source{
+    margin-block: 6px;
+}
+
+.news-desc{
+    margin-block: 16px;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #010101;
+    color: #000000;
+}
+
+.dark-mode-toggle {
+    margin-left: center;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
+.toggle-switch::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked + .toggle-switch {
+    background-color: #66bb6a;
+}
+
+input[type="checkbox"]:checked + .toggle-switch::after {
+    transform: translate(20px, -50%);
+}
+.navbar .btnLogin-popup {
+    width: 15px;
+    height: 10px;
+    background: gold;
+    border: none solid #258733;
+    outline: none;
+    border-radius: 1px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 110px;
+    margin-right: 100px;
+    transition: .5s;
+    
+ }
+ 
+ .navbar .btnLogin-popup:hover {
+    background:turquoise;
+    color: #162938;
+ 
+ }
+  /* Splash screen styles */
+  .splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure splash screen stays on top */
+}
+
+.splash-screen img {
+    width: 200px;
+}
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 14px;
+    color: #888;
+    margin: 0;
+}
+/* New styles for loading spinner */
+.loader {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* New styles for scroll-to-top button */
+#scroll-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #2294ed;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+#scroll-to-top-btn:hover {
+    background-color: #1d69a3;
+}
+
+.foot{
+    background-color: rgba(19, 26, 26, 0.839);
+  }
+
+
+.foot:hover{
+    background-color:rgba(9, 12, 12, 0.727) ;
+  }
+
+
+  .search-bar {
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.news-input {
+    margin-right: 5px; /* Adjust the margin as needed */
+}
+
+
